@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.cartelera.spring.ApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.414 s -- in com.cartelera.spring.ApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.940 s -- in com.cartelera.spring.ApplicationTests
