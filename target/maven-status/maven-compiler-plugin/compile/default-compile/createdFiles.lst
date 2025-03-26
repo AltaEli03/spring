@@ -1,0 +1,15 @@
+com\cartelera\spring\repository\UsuarioRepository.class
+com\cartelera\spring\security\CustomUserDetailsService.class
+com\cartelera\spring\Application.class
+com\cartelera\spring\entity\Pelicula.class
+com\cartelera\spring\controller\PeliculaController.class
+com\cartelera\spring\controller\ErrorController.class
+com\cartelera\spring\config\AsyncConfig.class
+com\cartelera\spring\security\SecurityConfig.class
+com\cartelera\spring\controller\LoginController.class
+com\cartelera\spring\entity\EstadoUsuario.class
+com\cartelera\spring\config\CustomExceptionResolver.class
+com\cartelera\spring\config\MailConfig.class
+com\cartelera\spring\repository\PeliculaRepository.class
+com\cartelera\spring\entity\Usuario.class
+com\cartelera\spring\controller\HomeController.class

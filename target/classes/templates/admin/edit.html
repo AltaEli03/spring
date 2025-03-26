@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="admin/default">
+
+<head>
+    <title>Editar Película</title>
+</head>
+
+<body>
+    <div layout:fragment="content" class="row">
+        <div class="col-md-8">
+            <h3>
+                <a href="/peliculas" class="btn btn-primary"><i class="bi bi-list-ul"></i> Lista de Películas</a>
+            </h3>
+            <h2>Editar Película</h2>
+            <form action="/peliculas/update" method="post" class="mb-3">
+                <input type="hidden" name="_csrf" th:value="${_csrf.token}" />
+                <input type="hidden" name="idmovie" th:value="${pelicula.idmovie}">
+
+                <div class="form-group mb-3">
+                    <label>Nombre:</label>
+                    <input type="text" class="form-control" name="nombre" th:value="${pelicula.nombre}" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label>Género:</label>
+                    <input type="text" class="form-control" name="genero" th:value="${pelicula.genero}" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label>Sinopsis:</label>
+                    <textarea class="form-control" name="sinopsis" rows="3" required
+                        th:text="${pelicula.sinopsis}"></textarea>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label>Horario:</label>
+                            <input type="text" class="form-control" name="horario" th:value="${pelicula.horario}"
+                                required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label>Sala:</label>
+                            <input type="text" class="form-control" name="sala" th:value="${pelicula.sala}" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label>URL de la Imagen:</label>
+                    <input type="text" class="form-control" name="imagenUrl" th:value="${pelicula.imagenUrl}" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label>URL del Video:</label>
+                    <input type="text" class="form-control" name="videoEmbed" th:value="${pelicula.videoEmbed}"
+                        required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="available">Estado:</label>
+                    <select class="form-select" name="estado" id="estado" th:value="${pelicula.estado}" required>
+                        <option value="true">Disponible</option>
+                        <option value="false">No Disponible</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label>Fecha Inicio:</label>
+                            <input type="date" class="form-control" name="fechaInicio"
+                                th:value="${pelicula.fechaInicio}" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label>Fecha Final:</label>
+                            <input type="date" class="form-control" name="fechaFinal" th:value="${pelicula.fechaInicio}"
+                                required>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-warning mt-3"><i class="bi bi-pencil"></i> Actualizar</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
