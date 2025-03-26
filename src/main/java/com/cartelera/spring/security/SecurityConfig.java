@@ -28,7 +28,8 @@ public class SecurityConfig {
                                                                 "/home",
                                                                 "/pelicula/**",
                                                                 "/error",
-                                                                "/search")
+                                                                "/search",
+                                                                "/favicon.ico")
                                                 .permitAll()
                                                 .requestMatchers("/peliculas/**").hasAuthority("ADMINISTRADOR")
                                                 .anyRequest().authenticated())
